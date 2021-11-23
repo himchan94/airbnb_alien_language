@@ -11,11 +11,12 @@
   margin: auto;
   text-align: center;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .main-container h1 {
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .btn {
@@ -39,5 +40,7 @@ label {
 
 .textarea {
   width: 100%;
-  min-height: 200px;
+  height: 200px;
+  overflow-y: auto;
+  font-size: 1.3rem;
 }
