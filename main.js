@@ -234,8 +234,9 @@ const korean_spliter = (char) => {
 const korean_obfuscationer = (text) => {
   const charList = text.split("");
 
-  // 한글 이외의 문자를 찾기 위한 정규식
-  const reg = /[a-zA-Z\d!?@#$%^&*():;+-=~{}<>\_\[\]\|\\\"\'\,\.\/\`\₩]/;
+  // 한글 이외의 문자와 하나로 구성된 모음 및 자음을 찾기 위한 정규식
+  const reg =
+    /[ㄱ-ㅎㅏ-ㅣa-zA-Z\d!?@#$%^&*():;+-=~{}<>\_\[\]\|\\\"\'\,\.\/\`\₩]/;
 
   const conveted_list = charList.map((char) => {
     if (char === " ") {
