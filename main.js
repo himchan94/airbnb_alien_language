@@ -2,7 +2,8 @@
 
 const inputBox = document.querySelector("#before_converted");
 const outputBox = document.querySelector("#after_converted");
-const btn = document.querySelector(".btn");
+const convertBtn = document.querySelector(".convert");
+const clearBtn = document.querySelector(".clear");
 
 const cho_list = [
   "ㄱ",
@@ -244,7 +245,7 @@ const korean_obfuscationer = (text) => {
     } else {
       const splited_korean = korean_spliter(char);
       const conveted_korean = korean_combinationer(splited_korean);
-      console.log(conveted_korean);
+      // console.log(conveted_korean);
       return conveted_korean;
     }
   });
@@ -252,7 +253,12 @@ const korean_obfuscationer = (text) => {
   return conveted_list;
 };
 
-btn.addEventListener("click", () => {
+convertBtn.addEventListener("click", () => {
   let output = korean_obfuscationer(inputBox.value);
   outputBox.value = output.join("");
+});
+
+clearBtn.addEventListener("click", () => {
+  inputBox.value = "";
+  outputBox.value = "";
 });
